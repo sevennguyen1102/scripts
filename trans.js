@@ -4,8 +4,11 @@ document.addEventListener('DOMContentLoaded', function () {
         var a1b2c3 = new URLSearchParams(window.location.search);
 
         function d4e5f6(g7h8i9) {
-            return g7h8i9.replace(/ /g, '_s_').replace(/-/g, '_d_').replace(/\//g, '');
-        }
+            return g7h8i9.replace(/ /g, '_s_')
+                          .replace(/-/g, '_d_')
+                          .replace(/\//g, '')
+                          .replace(/%20/g, '_');
+                    }
 
 
         if (a1b2c3.has('tid')) {
