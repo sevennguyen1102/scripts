@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return g7h8i9.replace(/ /g, '_s_')
                           .replace(/-/g, '_d_')
                           .replace(/\//g, '')
-                          .replace(/%20/g, '_');
+                          .replace(/+/g, '_');
                     }
 
 
