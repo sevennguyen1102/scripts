@@ -31,8 +31,10 @@ document.addEventListener('DOMContentLoaded', function () {
            if (urlParams.has('gclid')) {
                var gclid = urlParams.get('gclid');
                var sanitizedGclid = sanitizeParam(gclid);
-               urlParams.set('gclid', sanitizedGclid);
+               urlParams.set('SubID', sanitizedGclid);
+               urlParams.delete('gclid');
            }
+
 /* Tạm không sử dụng mẫu tracking GG  */
 
 
@@ -40,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
             urlParams.delete('gad_source');
         }
       
-        var trackingId = urlParams.get('gclid') || urlParams.get('gbraid') || urlParams.get('wbraid') || urlParams.get('msclkid') || urlParams.get('fbclid');
+        var trackingId = urlParams.get('SubID') || urlParams.get('gbraid') || urlParams.get('wbraid') || urlParams.get('msclkid') || urlParams.get('fbclid');
 
         if (urlParams.toString()) {
             var links = document.getElementsByTagName('a');
